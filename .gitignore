@@ -1,0 +1,12 @@
+# Ignore specific files
+journal1.php
+journal2.php
+debug.log
+
+# Ignore directories
+/node_modules/
+/logs/
+
+# Ignore all files of a specific type
+*.env
+*.log
