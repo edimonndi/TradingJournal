@@ -1,4 +1,11 @@
 <?php
+/**
+ * Trading Journal
+ * Copyright (c) 2024 @edimonndi
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
 // Database connection (update credentials as needed)
 $conn = new mysqli('localhost', 'root', 'mysql', 'trade_journal');
 
@@ -102,6 +109,23 @@ if (isset($_GET['export'])) {
     <title>Trade Journal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: lightblue; /* tomato color */
+            text-decoration: solid #000;
+        }
+    </style>
 
 </head>
 <body>
@@ -148,9 +172,11 @@ if (isset($_GET['export'])) {
     <!-- Statistics -->
     <div class="mb-4">
         <h5>Statistics:</h5>
-        <p>Total Entries: <?php echo $total_entries; ?></p>
-        <p>Wins: <?php echo $wins; ?></p>
-        <p>Win Rate: <?php echo $win_rate; ?>%</p>
+        <p style="color: green;font-weight: bold;">Total Entries: <?php echo $total_entries; ?></p>
+        <p style="color: red;font-weight: bold;">Wins: <?php echo $wins;?></p>
+        <p style="color: blue;font-weight: bold;">Win Rate: <?php echo $win_rate; ?>%</p>
+
+        <canvas id="myChart" width="200" height="50"></canvas>
     </div>
 
     <!-- Journal Entries -->
@@ -234,7 +260,6 @@ if (isset($_GET['export'])) {
 <br>
 
 <!-- Adding Chart.js Integration -->
-<canvas id="myChart" width="400" height="200">
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
@@ -279,6 +304,11 @@ const myChart = new Chart(ctx, {
 
 </canvas>
 
+
+
+    <div class="footer">
+        <p>&copy; 2024 <a href="https://github.com/edimonndi" target="_blank">@edimonndi</a> | Made with <span style="color:red;">♥</span> by <a href="https://twitter.com/edimonndi" target="_blank">@edimonndi</a></p>
+    </div>
 
 
 </body>

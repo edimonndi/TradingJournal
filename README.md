@@ -1,6 +1,7 @@
 # Trading Journal Application
 This is a web-based Trading Journal Application designed to help traders track their trades, strategies, mistakes, and performance over time. The journal includes features for adding, editing, deleting, and searching entries, as well as statistical insights and data export functionality.
 
+
 # Features:
  **Trade Management:**
 + Add and edit journal entries with fields for date, trade details, strategy, mistakes, tags, and a win/loss indicator.
@@ -38,3 +39,12 @@ This is a web-based Trading Journal Application designed to help traders track t
 3. Open the application in your browser to start tracking your trades.
    
 This application is perfect for traders who want to maintain a structured log of their trading activity and analyze their performance over time.
+
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+
+
+Made with ♥ by [@edimonndi](https://twitter.com/edimonndi).
